@@ -1,0 +1,163 @@
+.tc_custom.tc_blue .w_bg_light
+{
+	background: #80c6dc;
+	color: #fff;
+}
+
+.tc_custom.tc_blue .w_bg_dark
+{
+	background: #b8d5de;
+	color: #fff;
+}
+
+.tc_custom.tc_blue .w_border, .tc_custom.tc_blue .w_border_bottom
+{
+	border-color: #0091be;
+}
+
+.tc_custom.tc_blue .tc_on
+{
+	background: #b8d5de;
+	color: #fff;
+}
+
+.tc_custom.tc_blue .w_icon.w_button_previous
+{
+	background: #0091be url(../images/right.png) no-repeat center center;
+}
+
+.tc_custom.tc_blue .w_icon.w_button_next
+{
+	background: #0091be url(../images/left.png) no-repeat center center;
+}
+
+.tc_custom.tc_green .w_bg_light
+{
+	background: #46993d;
+	color: #fff;
+}
+
+.tc_custom.tc_green .w_bg_dark
+{
+	background: #92cd8c;
+	color: #fff;
+}
+
+.tc_custom.tc_green .w_border, .tc_custom.tc_green .w_border_bottom
+{
+	border-color: #296023;
+}
+
+.tc_custom.tc_green .tc_on
+{
+	background: #92cd8c;
+	color: #fff;
+}
+
+.tc_custom.tc_green .w_icon.w_button_previous
+{
+	background: #296023 url(../images/right.png) no-repeat center center;
+}
+
+.tc_custom.tc_green .w_icon.w_button_next
+{
+	background: #296023 url(../images/left.png) no-repeat center center;
+}
+
+.tc_custom.tc_pink .w_bg_light
+{
+	background: #f371d6;
+	color: #fff;
+}
+
+.tc_custom.tc_pink .w_bg_dark
+{
+	background: #f4c4e9;
+	color: #fff;
+}
+
+.tc_custom.tc_pink .w_border, .tc_custom.tc_pink .w_border_bottom
+{
+	border-color: #c02d9f;
+}
+
+.tc_custom.tc_pink .tc_on
+{
+	background: #f4c4e9;
+	color: #fff;
+}
+
+.tc_custom.tc_pink .w_icon.w_button_previous
+{
+	background: #c02d9f url(../images/right.png) no-repeat center center;
+}
+
+.tc_custom.tc_pink .w_icon.w_button_next
+{
+	background: #c02d9f url(../images/left.png) no-repeat center center;
+}
+
+.tc_custom .w_radius_top_left, .tc_custom .w_radius_top_right
+{
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+.tc_custom .w_border
+{
+	border: 1px solid;
+	border-left: none;
+}
+
+.tc_custom .w_border_bottom
+{
+	border-bottom: 1px solid;
+}
+
+.tc_custom .w_tabs.w_border_bottom
+{
+	border-bottom: none;	
+}
+
+.tc_custom .w_tabs, .tc_custom .tc_tabs_items
+{
+	height: 35px;	
+}
+
+.tc_custom .tc_tabs_items
+{
+	left: 35px;	
+	right: 35px;	
+}
+
+.tc_custom .w_tab
+{
+	height: 35px;
+	line-height: 35px;
+	font-weight: normal;
+	margin-top: 2px
+}
+
+.tc_custom.tc_fix .w_tab
+{
+	width: 50px;
+	text-align: center;	
+}
+
+.tc_custom .tc_on
+{
+	margin-top: 0px
+}
+
+.tc_custom .tc_arrow.w_bg_dark
+{
+	background: transparent;	
+}
+
+.tc_custom .w_icon.w_button_previous, .tc_custom .w_icon.w_button_next
+{
+	margin-top: 2px;
+	height: 35px;
+	width: 35px;	
+}

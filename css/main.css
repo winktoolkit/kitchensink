@@ -1,0 +1,132 @@
+html, body
+{
+	background-color: #000;
+	font-family: 'Arial';
+	min-height: 416px;
+}
+
+.wrapper
+{
+	position: relative;
+	
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+#orientation
+{
+	display: none;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	padding-top: 50px;
+	text-align: center;
+}
+
+#container
+{
+	background: transparent url(../images/linen.jpg) repeat;
+	
+	width: 200%;
+	
+	position: absolute;
+	
+	top: 0;
+	left: 0;
+	
+	opacity: 0;
+	
+	visibility: hidden;
+}
+
+.panel
+{
+	position: relative;
+	height: 100%;
+	
+	float: left;
+}
+
+.content
+{
+	background-color: #fff;
+	margin: 0;
+}
+
+.header
+{
+	position: relative;
+	background: #000;
+	height: 44px;
+	z-index: 997;
+}
+
+.firstLetter
+{
+	color: #999;
+	font-size: 27px
+}
+
+.letters
+{
+	color: #fff; 
+	font-size: 17px; 
+	margin-left: 10px;
+	text-shadow: #000 0px -1px 0px;	
+}
+
+.asp_loader
+{
+	position: absolute;
+	
+	top: 0;
+	left: 0;
+	
+	height: 75px; 
+	width: 100px; 
+	
+	padding-top: 10px;
+	
+	text-align: center;
+	
+	visibility: hidden;
+	
+	z-index: 999;
+}
+
+.asp_text
+{
+	padding: 6px;	
+}
+
+#list
+{
+	position: relative;
+	margin-top: -3px;
+	z-index: 995;
+}
+
+#options
+{
+	background: #4e4e4e;
+	
+	visibility: hidden;
+	
+	box-shadow: inset -4px 4px 15px #000;
+	
+	-webkit-box-shadow: inset -4px 4px 15px #000;
+	-moz-box-shadow: inset -4px 4px 15px #000;
+}
+
+#options p
+{
+	color: #fff;
+	padding: 5px 15px;
+	text-shadow: #000 0px -1px 0px;	
+	text-indent: 10px;
+}
+
+#tests, #test
+{
+	background: transparent;
+}

@@ -1,0 +1,21 @@
+.test_carousel_item_1
+{
+	margin: 0 10px;
+	font-size: 12px;
+	height: 136px;
+	width: 260px;
+	text-align: center;
+}
+
+.test_carousel_item_1 .h1
+{
+	font-size: 16px;
+	font-weight: bold;
+	padding: 15px 0;
+}
+
+.test_carousel_item_1 .h2
+{
+	font-size: 13px;
+	padding: 15px 0;
+}

@@ -1,0 +1,71 @@
+#test_buttons .w_button.w_red
+{
+	background-color: #bd1e1e;
+	
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#bd1e1e), to(#bd1e1e));
+	background-image: -moz-linear-gradient(top, #bd1e1e, #bd1e1e);
+	
+	border-color: #d12020;
+	color: #fff;
+}
+
+#test_buttons .w_button.w_green
+{
+	background-color: #68bb1d;
+	
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#68bb1d), to(#68bb1d));
+	background-image: -moz-linear-gradient(top, #68bb1d, #68bb1d);
+	
+	border-color: #75d321;
+	color: #fff;
+}
+
+#test_buttons .w_button.w_blue
+{
+	background-color: #2a6fb7;
+	
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#2a6fb7), to(#2a6fb7));
+	background-image: -moz-linear-gradient(top, #2a6fb7, #2a6fb7);
+	
+	border-color: #2d83dc;
+	color: #fff;
+}
+
+#test_buttons .w_button.w_small
+{
+	height: 30px;
+	line-height: 30px
+}
+
+#test_buttons .w_button.w_rounded
+{
+	border-radius: 22px;
+	
+	-webkit-border-radius: 22px;
+	-moz-border-radius: 22px;
+}
+
+#test_buttons .w_toggle_custom
+{
+	background:transparent url(../images/toggle_1.png) no-repeat center;
+}
+
+#test_buttons .w_toggle_custom_2
+{
+	background:transparent url(../images/toggle_2.png) no-repeat center;
+	border: 2px solid #F8188F;
+	
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+#test_buttons .w_toggle_custom_2 .to_toggle_btn 
+{
+	background: none;
+	background-color: #0062DC;
+	
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}

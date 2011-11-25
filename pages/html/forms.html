@@ -1,0 +1,56 @@
+<div id="test_forms" class="test_bloc">
+	<h1>
+		Wink custom form
+	</h1>
+	<span class="w_form_title">
+		Credentials
+	</span>
+	<div class="w_form">
+		<div class="w_row">
+			<label for="test_form_1">login</label><input id="test_form_1" type="text" />
+		</div>
+		<div class="w_row">
+			<label for="test_form_2">password</label><input id="test_form_2" type="password" />
+		</div>
+	</div>
+	
+	<span class="w_form_title">
+		About you
+	</span>
+	<div class="w_form">
+		<div class="w_row">
+			<label for="test_form_3">male</label><input type="radio" id="test_form_3" name="test" value="1" class="w_radio_form_custom w_checked" checked onchange="ks.tests.radio.toggle(this)"/>
+		</div>
+		<div class="w_row">
+			<label for="test_form_4">female</label><input type="radio" id="test_form_4" name="test" value="1" class="w_radio_form_custom" onchange="ks.tests.radio.toggle(this)"/>
+		</div>
+		<div class="w_row">
+			<label>age</label>
+			<div class="w_select_form_custom">
+				<select onfocus="ks.tests.form.focus();" onblur="ks.tests.form.blur();">
+					<option selected>20-25</option>
+					<option>25-30</option>
+					<option>30-35</option>
+					<option>35-40</option>
+					<option>40-45</option>
+					<option>45-50</option>
+					<option>50-60</option>
+					<option>60-70</option>
+					<option>70-...</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	
+	<span class="w_form_title">
+		Your dev preferences
+	</span>
+	<div class="w_form">
+		<div class="w_row">
+			<label for="test_form_5">JS</label><input type="checkbox" id="test_form_5" class="w_checkbox_form_custom" onchange="ks.tests.checkbox.toggle(this)"/>
+		</div>
+		<div class="w_row">
+			<label for="test_form_6">Java</label><input type="checkbox" id="test_form_6" class="w_checkbox_form_custom" onchange="ks.tests.checkbox.toggle(this)"/>
+		</div>
+	</div>
+</div>

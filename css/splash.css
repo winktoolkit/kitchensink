@@ -1,0 +1,26 @@
+#splash
+{
+	background: #000 url(../images/splash.png) no-repeat top left;
+	height: 100%;
+	opacity: 1;
+	visibility: hidden;
+}
+
+#splash div
+{
+	display: -webkit-box;
+	
+	height: 100%;
+	width: 100%;
+	
+	-webkit-box-orient: vertical;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+}
+
+#splash img
+{
+	display: block;
+	opacity: 0;
+	margin-top: -50px;
+}

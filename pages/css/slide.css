@@ -1,0 +1,42 @@
+#test_slide_1
+{
+	border: 1px solid #ccc;
+	position: relative;
+	margin: auto;
+	width: 280px;
+	height: 280px;
+	overflow-x: hidden;
+}
+
+.test_slide_page
+{
+	width: 280px;
+	height: 280px;
+	
+	line-height: 280px;
+	
+	font-size: 30px;
+	text-align: center;
+}
+
+.test_slide_previous
+{
+	position: absolute;
+	
+	top: 118px;
+	left: 5px;
+	
+	height: 44px;
+	width: 44px;	
+}
+
+.test_slide_next
+{
+	position: absolute;
+	
+	top: 118px;
+	right: 5px;
+	
+	height: 44px;
+	width: 44px;	
+}

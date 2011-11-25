@@ -1,0 +1,35 @@
+#tests_scroller
+{
+	position: relative;
+	margin-top: 5px;
+	z-index: 100;
+}
+
+#tests_scroller .w_bg_light
+{
+	background: transparent;
+	color: #4e4e4e;
+}
+
+#tests_scroller .w_border, #tests_scroller .w_border_bottom
+{
+	border-width: 2px;
+	border-color: #e2e1e1;
+}
+
+#tests_scroller .w_list_item
+{
+	font-size: 17px;
+}
+
+#tests_scroller .w_list_item.preselected a
+{
+	background: #eee;
+	color: #000;
+}
+
+#tests_scroller .w_list_item.selected a
+{
+	background: #eee;
+	color: #f50;
+}

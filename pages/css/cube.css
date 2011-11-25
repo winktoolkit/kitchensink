@@ -1,0 +1,43 @@
+#test_cube_1 
+{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	margin: auto;
+}
+
+.test_cube_faces 
+{
+	display: none;
+}
+
+.test_cube_face 
+{
+	background-color: rgba(255, 255, 255, 0.9);
+	border: 1px solid rgba(0, 0, 0, 0.95);
+	
+	width: 199px;
+	height: 199px;
+}
+
+.test_cube_title 
+{
+	background: #000;
+	
+	color: #fff;
+	
+	text-align: center;
+	font-size: 14px;
+	
+	padding: 0 5px;
+	
+	-webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.test_cube_summary 
+{
+	color: #000;
+	font-size: 40px;
+	padding-top: 60px;
+	text-align: center;
+}

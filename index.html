@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="apple-mobile-web-app-capable" content="no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		
+		<title>Wink kitchensink</title>
+	
+		<script type="text/javascript" src="./js/wink.cache.js"></script>
+		
+		<script>
+			var useLocalDatabase = true;
+			
+			var resources =
+			[
+				{ url: './js/wink-1.4.0.min.js', type: 'js', group: 0 },
+				
+				{ url: './js/main.js', type: 'js', group: 1 },
+				
+				{ url: './js/config.js', type: 'js', group: 2 },
+				{ url: './js/splash.js', type: 'js', group: 2 },
+				{ url: './js/navigation.js', type: 'js', group: 2 },
+				{ url: './js/options.js', type: 'js', group: 2 },
+				{ url: './js/list.js', type: 'js', group: 2 },
+				{ url: './js/test.js', type: 'js', group: 2 },
+				{ url: './js/utils.js', type: 'js', group: 2 },
+				
+				{ url: './css/wink-1.4.0.min.css', type: 'css', group: 0 },
+				
+				{ url: './css/main.css', type: 'css', group: 0 },
+				{ url: './css/splash.css', type: 'css', group: 0 },
+				{ url: './css/menu.css', type: 'css', group: 0 },
+				{ url: './css/tests.css', type: 'css', group: 0 },
+				{ url: './css/test.css', type: 'css', group: 0 }
+			];
+			
+			(function() {
+				window.addEventListener('DOMContentLoaded', function()
+				{
+					wink.load(resources, function()
+					{
+						ks.main.init();
+					}, 
+					{
+						useLocalDatabase: useLocalDatabase
+					});
+				}, false);
+			})();
+		</script>
+    </head> 
+    
+	<body>
+		<div id="orientation" style="visibility: hidden">
+			<span style="font-size: 20px;">Wink kitchensink</span>
+			<br />
+			<br />
+			Of course... Wink can also handle orientation changes ;)
+		</div>
+		<div id="wrapper" class="wrapper" style="visibility: hidden">
+			<div id="splash">
+				<div>
+					<img id="logo" src="./images/logo.png" />
+				</div>
+				<span style="position: absolute; bottom: -15px; right: -15px; font-size: 118px; color: #343333">WINK</span>
+			</div>
+			
+			<div id="options" class="panel">
+				<div style="height: 35px; width: 90%; border-bottom: 1px dashed #999; padding-top: 8px; margin-left: 15px">
+					<span class="letters">
+						<span class="firstLetter">A</span>bout	
+					</span>
+				</div>
+				<div id="about_scroller" class="wrapper">
+					<div id="aboutContent">
+						<p>
+							Wink Toolkit is a lightweight JavaScript toolkit which will help you build great mobile web apps.
+						</p>
+						<p>
+							It is designed and developed to meet the specific constraints of the mobile environment.
+						</p>
+						<p>
+							The toolkit's core offers all the basic functionalities a mobile developer would need from touch event handling to DOM manipulation objects or CSS transforms utilities.
+						</p>
+						<p>
+							Additionally, it offers a wide range of UI components are offered to help you improve the look and feel of a web app, or simply to experiment with new user interactions.
+						</p>
+						<p>
+							Gesture recognition, HTML5 features like geolocation or local storage, multitouch events and many others are also part of the Wink Toolkit.
+						</p>
+						<p>
+							The project currently targets iOS (iPhone), Android platforms, Blackberry (6+), Bada...
+						</p>
+						<br />
+					</div>
+				</div>
+			</div>
+			
+			<div id="container">
+				<div id="tests" class="panel">
+					<div class="header">
+						<a href="#" onclick="ks.options.toggle()">
+							<img src="./images/menu.png" />
+						</a>
+						<span class="letters" style="position: absolute; bottom: 2px; right: 5px">
+							<span class="firstLetter">K</span>itchensink
+						</span>
+					</div>
+					<div id="navigation">
+						<div id="menu">
+							<div style="padding: 13px;">
+								<div class="radio">
+									<input type="radio" id="rb1" name="mobileRadio" value="ui" onchange="ks.navigation.toggle(this)" class="checked" checked><label for="rb1">user interface</label>
+								</div>
+								<div class="radio">
+									<input type="radio" id="rb2" name="mobileRadio" value="animations" onchange="ks.navigation.toggle(this)"><label for="rb2">animations</label>
+								</div>
+								<div class="radio">
+									<input type="radio" id="rb3" name="mobileRadio" value="events" onchange="ks.navigation.toggle(this)"><label for="rb3">interactions</label>
+								</div>
+								<div class="radio">
+									<!-- nothing yet -->
+								</div>
+								<div class="radio">
+									<input type="radio" id="rb5" name="mobileRadio" value="media" onchange="ks.navigation.toggle(this)"><label for="rb5">media</label>
+								</div>
+							</div>
+						</div>
+						<div id="handlebar">
+							<img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" />
+						</div>
+					</div>
+					<div id="loader" class="w_window w_border w_radius w_bg_dark asp_loader">
+						<div class="asp_text">loading...</div>
+					</div>
+					<div id="list">
+						<div id="tests_scroller" class="wrapper">
+							<div id="scrollContent">
+								<ul id="content" class="w_list w_border content">
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="test" class="panel">
+					<div class="header">
+						<a href="#" onclick="ks.list.show()">
+							<img src="./images/back.png" height="44px" />
+						</a>
+						<div id="title"></div>
+					</div>
+					<div id="testContent">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html> 

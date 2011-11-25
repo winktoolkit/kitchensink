@@ -1,0 +1,24 @@
+#test_fade_1
+{
+	border: 1px solid #ccc;
+	position: relative;
+	margin: auto;
+	width: 280px;
+	height: 280px;
+}
+
+.test_fade_page
+{
+	position: absolute;
+	
+	top: 0;
+	left: 0;
+	
+	width: 280px;
+	height: 280px;
+	
+	line-height: 280px;
+	
+	font-size: 30px;
+	text-align: center;
+}

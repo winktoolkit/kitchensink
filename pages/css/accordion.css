@@ -1,0 +1,16 @@
+#test_accordion_2 .w_bg_light.ac_title
+{
+	color: #f50;
+	background: #fdcbb3;
+}
+
+#test_accordion_2 .w_border_left, #test_accordion_2 .w_border_right, #test_accordion_2 .w_border_top, #test_accordion_2 .w_border_bottom
+{
+	border-color: #f50;
+}
+
+#test_accordion_2 .ac_content
+{
+	color: #fff;
+	background: #333;
+}

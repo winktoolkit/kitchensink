@@ -1,0 +1,116 @@
+#test_audio_2 .ap_container
+{
+	padding: 0;
+	-webkit-box-shadow: 1px 1px 3px #888;
+}
+
+#test_audio_2 .w_icon.w_button_play
+{
+	background: url(../images/play.png) no-repeat center 10px;
+}
+
+#test_audio_2 .w_icon.w_button_pause
+{
+	background: url(../images/pause.png) no-repeat center 10px;
+}
+
+#test_audio_2 .w_bg_dark
+{
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#4a4c4d), to(#2b2d2d));
+	background-image: -moz-linear-gradient(top, #4a4c4d, #2b2d2d);
+}
+
+#test_audio_2 .w_radius
+{
+	border-radius: 3px;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+#test_audio_2 .w_bar
+{
+	background: #262929;
+	height: 5px;
+}
+
+#test_audio_2 .w_bar .w_bar_progress
+{
+	background: url(../images/progress.png) repeat-x center center;
+	z-index: 51;
+}
+
+#test_audio_2 .w_bar .w_bar_progress.ap_buffering_bar 
+{
+	background: #464849;
+	z-index: 50;
+}
+
+#test_audio_2 .w_icon
+{
+	height: 30px;
+	width: 34px;
+}
+
+#test_audio_2 .ap_progress
+{
+	position: relative;
+	top: 14px;
+}
+
+#test_audio_2 .ap_progress_container
+{
+	height: 30px;
+	margin: 0 10px 0 17px;
+}
+
+#test_audio_2 .w_bar.w_border
+{
+	border-color: #000;
+}
+
+#test_audio_3 
+{
+	position: relative;
+	
+	background-color: #101010;
+	
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#535151), to(#2f2f2f));
+	background-image: -moz-linear-gradient(top, #2f2f2f, #101010);
+	
+	margin: auto;
+	
+	height: 160px;
+	width: 160px;
+	
+	border-radius: 80px;
+	
+	-webkit-border-radius: 80px;
+	-moz-border-radius: 80px;
+	
+	-webkit-box-shadow: 0px 0px 100px #82c951;
+}
+
+#test_audio_3 .w_icon.w_button_play
+{
+	background: url(../images/play_2.png) no-repeat center 10px;
+}
+
+#test_audio_3 .w_icon.w_button_pause
+{
+	background: url(../images/pause_2.png) no-repeat center 10px;
+}
+
+#test_audio_player 
+{
+	position: absolute;
+	
+	top: 50px;
+	left: 60px;
+	
+	height: 40px;
+	width: 40px;
+	
+	text-align: center;
+	z-index: 1;
+}

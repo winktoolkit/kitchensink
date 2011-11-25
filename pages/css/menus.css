@@ -1,0 +1,59 @@
+.mn_menu
+{
+	top: 0;
+	left: 0;	
+}
+
+.mn_menu .mn_menu_item.w_menu_1_1 .mn_image 
+{
+	background: url(../images/item_1.png) no-repeat center 0px;
+}
+
+.mn_menu .mn_menu_item.w_menu_1_2 .mn_image 
+{
+	background: url(../images/item_2.png) no-repeat center 0px;
+}
+
+.mn_menu .mn_menu_item.w_menu_1_3 .mn_image 
+{
+	background: url(../images/item_3.png) no-repeat center 0px;
+}
+
+.mn_menu .mn_menu_item.w_menu_1_4 .mn_image 
+{
+	background: url(../images/item_4_inactive.png) no-repeat center 0px;
+	height: 40px;
+}
+
+.mn_menu .mn_menu_item.w_menu_1_4 .mn_title 
+{
+	height: 47px;
+	line-height: 18px;
+}
+
+.mn_menu .mn_menu_item.w_menu_1_4 .mn_title .mn_title_text 
+{
+	color: #7b7b7b;
+}
+
+.w_menu_custom.w_bg_dark
+{
+	background: #000;
+	color: #f50;	
+}
+
+.pp_popup_add
+{
+	width: 400px;
+	left: 37px;
+}
+
+@media screen and (max-device-width: 480px)
+{
+	.pp_popup_add
+	{
+		width: 250px;
+		left: 37px;
+	}
+}
+

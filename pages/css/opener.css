@@ -1,0 +1,37 @@
+#test_opener_1
+{
+	position: relative;
+	
+	border: 1px solid #ccc;
+	
+	height: 250px;
+	width: 200px;
+	
+	margin: auto;
+	
+	z-index: 995;
+}
+
+.test_opener_content
+{
+	font-size: 10px;
+	padding: 125px 5px 5px 5px;
+}
+
+.test_opener_color
+{
+	display: inline-block;
+	
+	height: 8px;
+	width: 5px;	
+	
+	margin-right: 5px;
+}
+
+.op_container
+{
+	position: absolute;
+	
+	top: 0;
+	left: 0;
+}
