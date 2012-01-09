@@ -2,7 +2,7 @@
  * @author:
  * 	--> Jérôme GIRAUD
  */
-ks.winkPath = '../../../wink/branches/1.4.x/';
+ks.winkPath = '../wink/';
 ks.config =
 {
 	ui:

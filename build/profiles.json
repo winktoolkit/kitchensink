@@ -1,0 +1,29 @@
+{
+	"build": {
+		"jsFile": "wink-VERSION-PROFILE-TARGET.js",
+		"cssFile": "wink-VERSION-PROFILE-TARGET.css",
+		"version": "1.4.1",
+		"defaultLocaleList": [ "en_EN" ]
+	},
+	"profiles": [
+		{
+			"name": "kitchensink",
+			"modules": [
+				// CORE
+				"core",
+				// MATH
+				"geometric", 
+				// UX
+				"history", "inertia", "movementtracker", "window",
+				// UI
+				"cspinner", "scroller"
+			],
+			"css": [
+				"_themes/wink.css",
+				"_themes/default/css/wink.default.css",
+				"_themes/default/css/wink.default.buttons.css",
+				"_themes/default/css/wink.default.icons.css"
+			]
+		}
+	]
+}
