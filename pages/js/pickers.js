@@ -23,14 +23,14 @@ ks.tests.pickers = (function()
 		var month = ((d.getMonth()+1).toString().length == 1)?('0' + (d.getMonth()+1).toString()):(d.getMonth()+1).toString();
 		var year = d.getFullYear();
 
-		$('test_pickers_1').innerHTML = day + '/' + month + '/' + year;
+		wink.byId('test_pickers_1').innerHTML = day + '/' + month + '/' + year;
 	};
 	
 	pickers.fillColor = function(result)
 	{
-		$("test_pickers_2").innerHTML = '&nbsp;';
-		$("test_pickers_2").style.width = '14px';
-		$("test_pickers_2").style.background = result.color;
+		wink.byId("test_pickers_2").innerHTML = '&nbsp;';
+		wink.byId("test_pickers_2").style.width = '14px';
+		wink.byId("test_pickers_2").style.background = result.color;
 	};
 	
 	pickers.showDatePicker = function()

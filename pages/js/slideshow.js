@@ -80,7 +80,7 @@ ks.tests.slideshow = (function()
 	slideshow.init = function()
 	{
 		this.slideshow = new wink.ui.xy.Slideshow(properties);
-		$('test_slideshow_1').appendChild(this.slideshow.getDomNode());
+		wink.byId('test_slideshow_1').appendChild(this.slideshow.getDomNode());
 	};
 	
 	slideshow.init();

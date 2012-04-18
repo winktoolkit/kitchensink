@@ -20,8 +20,8 @@ ks.tests.buttons = (function()
 			position: 'right'
 		});
 
-		$('test_button_1').appendChild(this.toggleButton1.getDomNode());
-		$('test_button_2').appendChild(this.toggleButton2.getDomNode());
+		wink.byId('test_button_1').appendChild(this.toggleButton1.getDomNode());
+		wink.byId('test_button_2').appendChild(this.toggleButton2.getDomNode());
 	};
 	
 	buttons.init();

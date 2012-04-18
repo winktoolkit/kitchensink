@@ -39,9 +39,9 @@ ks.tests.notifications = (function()
 		this.newsticker2 = new wink.ui.xy.NewsTicker(properties2);
 		this.newsticker3 = new wink.ui.xy.NewsTicker(properties3);
 		
-		$('test_notifications_1').appendChild(this.newsticker1.getDomNode());
-		$('test_notifications_2').appendChild(this.newsticker2.getDomNode());
-		$('test_notifications_3').appendChild(this.newsticker3.getDomNode());
+		wink.byId('test_notifications_1').appendChild(this.newsticker1.getDomNode());
+		wink.byId('test_notifications_2').appendChild(this.newsticker2.getDomNode());
+		wink.byId('test_notifications_3').appendChild(this.newsticker3.getDomNode());
 	};
 
 	notifications.init();

@@ -5,6 +5,6 @@ ks.tests.toolbar =
 	add: function()
 	{
 		this.i++;
-		$('test_toolbar_1').innerHTML = this.i;
+		wink.byId('test_toolbar_1').innerHTML = this.i;
 	}
 };

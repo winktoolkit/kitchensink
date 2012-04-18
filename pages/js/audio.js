@@ -53,8 +53,8 @@ ks.tests.audio = (function()
 		ap.init = function(props) 
 		{
 			_url = props.url;
-			_parent = $(props.parent);
-			_playBtn = $(props.playBtn);
+			_parent = wink.byId(props.parent);
+			_playBtn = wink.byId(props.playBtn);
 			_onready = props.onready;
 			_onprogress = props.onprogress;
 			_ontimeupdate = props.ontimeupdate;
@@ -162,9 +162,9 @@ ks.tests.audio = (function()
 			canChangeTime: false
 		});
 
-		$('test_audio_1').appendChild(this.player1.getDomNode());
-		$('test_audio_2').appendChild(this.player2.getDomNode());
-		$('test_audio_3').appendChild(this.wheel.getDomNode());
+		wink.byId('test_audio_1').appendChild(this.player1.getDomNode());
+		wink.byId('test_audio_2').appendChild(this.player2.getDomNode());
+		wink.byId('test_audio_3').appendChild(this.wheel.getDomNode());
 		
 		wink.subscribe('/mediawheel/events/timeupdate', 
 		{ 

@@ -25,15 +25,15 @@ ks.options = (function()
 	 */
 	options.toggle = function()
 	{
-		wink.fx.apply($('container'), {'transition-timing-function': 'ease-in-out'});
+		wink.fx.apply(wink.byId('container'), {'transition-timing-function': 'ease-in-out'});
 		
 		if ( optionsDisplayed == 0 )
 		{
-			$('container').translate(window.innerWidth - 81, 0);
+			wink.fx.translate(wink.byId('container'), window.innerWidth - 81, 0);
 			optionsDisplayed = 1;
 		} else
 		{
-			$('container').translate(0, 0);
+			wink.fx.translate(wink.byId('container'), 0, 0);
 			optionsDisplayed = 0;
 		}
 	};

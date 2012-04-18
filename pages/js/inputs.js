@@ -24,7 +24,7 @@ ks.tests.input = (function()
 	
 	var properties3 = 
     {
-        input: $('test_input_3'),
+        input: wink.byId('test_input_3'),
         managers: 
         {                
             data: 
@@ -53,8 +53,8 @@ ks.tests.input = (function()
 	var input3 = new wink.plugins.completion.Component(properties3);
 	input3.start();
 	
-	$('test_input_1').appendChild(input1.getDomNode());
-	$('test_input_2').appendChild(input2.getDomNode());
+	wink.byId('test_input_1').appendChild(input1.getDomNode());
+	wink.byId('test_input_2').appendChild(input2.getDomNode());
 	
 	/**
 	 * 
@@ -85,7 +85,7 @@ ks.tests.input = (function()
     {
     	if ( wink.ua.isIOS && wink.ua.osVersion < 5)
     	{
-    		$('test_inputs').style.visibility = 'hidden';
+    		wink.byId('test_inputs').style.visibility = 'hidden';
     	}
     };
     
@@ -96,7 +96,7 @@ ks.tests.input = (function()
     {
     	if ( wink.ua.isIOS && wink.ua.osVersion < 5)
     	{
-    		$('test_inputs').style.visibility = 'visible';
+    		wink.byId('test_inputs').style.visibility = 'visible';
     	}
     };
     

@@ -49,7 +49,7 @@ ks.list = (function()
 		
 		ks.options.init();
 		
-		$('logo').style.opacity = '1';
+		wink.byId('logo').style.opacity = '1';
 	};
 	
 	/**
@@ -59,12 +59,12 @@ ks.list = (function()
 	{
 		ks.utils.sizeElements();
 		
-		$('wrapper').style['overflow-y'] = 'hidden';
-		$('wrapper').style.height = window.innerHeight + 'px';
+		wink.byId('wrapper').style['overflow-y'] = 'hidden';
+		wink.byId('wrapper').style.height = window.innerHeight + 'px';
 		
-		wink.fx.apply($('container'), {'transition-timing-function': 'linear'});
+		wink.fx.apply(wink.byId('container'), {'transition-timing-function': 'linear'});
 		
-		$('container').translate(0, 0);
+		wink.fx.translate(wink.byId('container'), 0, 0);
 	};
 	
 	/**
@@ -72,7 +72,7 @@ ks.list = (function()
 	 */
 	list.build = function(section) 
 	{
-		$('content').innerHTML = '';
+		wink.byId('content').innerHTML = '';
 		
 		for (var i = 0; i < ks.config[section].length; i++)
 		{
@@ -80,7 +80,7 @@ ks.list = (function()
 			
 			li.innerHTML = '<a href="#" onclick="ks.test.load(\'' + section + '\', ' + i + ')">' + ks.config[section][i].title + '</a><span class="w_icon w_chevron"></span>';
 			
-			$('content').appendChild(li);
+			wink.byId('content').appendChild(li);
 			
 			wink.addClass(li, "w_list_item w_border_bottom w_bg_light");
 		}

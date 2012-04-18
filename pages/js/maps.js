@@ -4,8 +4,8 @@ ks.tests.maps = (function()
 	
 	map.init = function()
 	{
-		$('map_canvas').style.height = window.innerHeight - 44 + 'px';
-		$('map_canvas').style.width = window.innerWidth + 'px';
+		wink.byId('map_canvas').style.height = window.innerHeight - 44 + 'px';
+		wink.byId('map_canvas').style.width = window.innerWidth + 'px';
 		
 		var script = document.createElement('script');
 		script.type = 'text/javascript';
@@ -30,7 +30,7 @@ ks.tests.maps = (function()
 	      mapTypeId: google.maps.MapTypeId.ROADMAP
 	    };
 	    
-	    map = new google.maps.Map($('map_canvas'), myOptions);
+	    map = new google.maps.Map(wink.byId('map_canvas'), myOptions);
 	    
 	    marker = new google.maps.Marker(
 	    	{

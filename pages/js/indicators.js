@@ -64,11 +64,11 @@ ks.tests.indicators = (function()
 		this.progressBar2.setValue(80);
 		this.progressBar3.setValue(50);
 		
-		$('test_indicators_1').appendChild(this.spinner1.getDomNode());
-		$('test_indicators_2').appendChild(this.spinner2.getDomNode());
-		$('test_indicators_3').appendChild(this.progressBar1.getDomNode());
-		$('test_indicators_4').appendChild(this.progressBar2.getDomNode());
-		$('test_indicators_5').appendChild(this.progressBar3.getDomNode());
+		wink.byId('test_indicators_1').appendChild(this.spinner1.getDomNode());
+		wink.byId('test_indicators_2').appendChild(this.spinner2.getDomNode());
+		wink.byId('test_indicators_3').appendChild(this.progressBar1.getDomNode());
+		wink.byId('test_indicators_4').appendChild(this.progressBar2.getDomNode());
+		wink.byId('test_indicators_5').appendChild(this.progressBar3.getDomNode());
 	};
 
 	indicators.init();

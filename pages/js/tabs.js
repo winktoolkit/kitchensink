@@ -47,11 +47,11 @@ ks.tests.tabs = (function()
 	tabs.tab4 = new wink.ui.layout.TabContainer(properties4);
 	tabs.tab5 = new wink.ui.layout.TabContainer(properties5);
 	
-	$('test_tabs_1').appendChild(tabs.tab1.getDomNode());
-	$('test_tabs_2').appendChild(tabs.tab2.getDomNode());
-	$('test_tabs_3').appendChild(tabs.tab3.getDomNode());
-	$('test_tabs_4').appendChild(tabs.tab4.getDomNode());
-	$('test_tabs_5').appendChild(tabs.tab5.getDomNode());
+	wink.byId('test_tabs_1').appendChild(tabs.tab1.getDomNode());
+	wink.byId('test_tabs_2').appendChild(tabs.tab2.getDomNode());
+	wink.byId('test_tabs_3').appendChild(tabs.tab3.getDomNode());
+	wink.byId('test_tabs_4').appendChild(tabs.tab4.getDomNode());
+	wink.byId('test_tabs_5').appendChild(tabs.tab5.getDomNode());
 
 	return tabs;
 	

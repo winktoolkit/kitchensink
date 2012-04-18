@@ -376,10 +376,10 @@ ks.tests.cube = (function()
 		var beijing =  this.worldClock(8, "Beijing");
 		var moscow = this.worldClock(3, "Europe");
 		
-		$('test_cube_paris').innerHTML = paris.hours + ":" + paris.minutes + ":" + paris.seconds;
-		$('test_cube_nyc').innerHTML = newyork.hours + ":" + newyork.minutes + ":" + newyork.seconds;
-		$('test_cube_beijing').innerHTML = beijing.hours + ":" + beijing.minutes + ":" + beijing.seconds;
-		$('test_cube_moscow').innerHTML = moscow.hours + ":" + moscow.minutes + ":" + moscow.seconds;
+		wink.byId('test_cube_paris').innerHTML = paris.hours + ":" + paris.minutes + ":" + paris.seconds;
+		wink.byId('test_cube_nyc').innerHTML = newyork.hours + ":" + newyork.minutes + ":" + newyork.seconds;
+		wink.byId('test_cube_beijing').innerHTML = beijing.hours + ":" + beijing.minutes + ":" + beijing.seconds;
+		wink.byId('test_cube_moscow').innerHTML = moscow.hours + ":" + moscow.minutes + ":" + moscow.seconds;
 
 		this.timer = wink.setTimeout(this, 'updateTime', 1000); 
 	};
@@ -410,7 +410,7 @@ ks.tests.cube = (function()
 	{
 		this.cube = new wink.ui.xyz.Cube(properties);
 		
-		$('test_cube_1').appendChild(this.cube.getDomNode());
+		wink.byId('test_cube_1').appendChild(this.cube.getDomNode());
 		
 		this.updateTime();
 	};

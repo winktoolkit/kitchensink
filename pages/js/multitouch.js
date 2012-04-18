@@ -10,11 +10,11 @@ ks.tests.multitouch = (function()
 			
 	multitouch.init = function()
 	{
-		$('test_multitouch_1').listenToGesture('instant_scale', { context: this, method: 'instantScale' }, { preventDefault: true });
-		$('test_multitouch_1').listenToGesture('gesture_end', { context: this, method: 'gestureEnd' }, { preventDefault: true });
+		wink.ux.gesture.listenTo(wink.byId('test_multitouch_1'), 'instant_scale', { context: this, method: 'instantScale' }, { preventDefault: true });
+		wink.ux.gesture.listenTo(wink.byId('test_multitouch_1'), 'gesture_end', { context: this, method: 'gestureEnd' }, { preventDefault: true });
 		
-		$('test_multitouch_4').listenToGesture('instant_rotation', { context: this, method: 'instantRotation' }, { preventDefault: true });
-		$('test_multitouch_4').listenToGesture('gesture_end', { context: this, method: 'gestureEnd' }, { preventDefault: true });
+		wink.ux.gesture.listenTo(wink.byId('test_multitouch_4'), 'instant_rotation', { context: this, method: 'instantRotation' }, { preventDefault: true });
+		wink.ux.gesture.listenTo(wink.byId('test_multitouch_4'), 'gesture_end', { context: this, method: 'gestureEnd' }, { preventDefault: true });
 	};
 	
 	multitouch.instantScale = function(gestureInfos)
@@ -25,9 +25,7 @@ ks.tests.multitouch = (function()
 		{
 			this.currentScale = nextScale;
 			
-			$('test_multitouch_2').scale(this.currentScale, this.currentScale);
-			//$('test_multitouch_2').style.height = (this.currentScale*152) + 'px';
-			//$('test_multitouch_2').style.width = (this.currentScale*204) + 'px';
+			wink.fx.scale(wink.byId('test_multitouch_2'), this.currentScale, this.currentScale);
 		}
 	};
 	
@@ -38,7 +36,7 @@ ks.tests.multitouch = (function()
 		if ( nextRotation > 0 && nextRotation < 215 )
 		{
 			this.currentRotation = (gestureInfos.rotation + this.rotation) % 360;
-			$('test_multitouch_5').translate(-(570/360 * this.currentRotation), 0);
+			wink.fx.translate(wink.byId('test_multitouch_5'), -(570/360 * this.currentRotation), 0);
 		}
 	};
 	

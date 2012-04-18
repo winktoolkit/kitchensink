@@ -7,7 +7,7 @@ ks.tests.dnd = (function()
 			
 	dnd.init = function()
 	{
-		this.manager = new wink.ux.Dnd({zone: $('test_dnd')});
+		this.manager = new wink.ux.Dnd({zone: wink.byId('test_dnd')});
 
 		// Define the d&d source and its methods
 		
@@ -37,18 +37,18 @@ ks.tests.dnd = (function()
 
 		wink.ux.dnd.Source.prototype.getAvatar = function()
 		{
-			var avatar = $(this.id).parentNode.cloneNode(true);
+			var avatar = wink.byId(this.id).parentNode.cloneNode(true);
 
 			avatar.style.position = 'absolute';
 			avatar.style.opacity = '0.5';
 			
-			avatar.style.width = $('test_dnd').offsetWidth + 'px';
+			avatar.style.width = wink.byId('test_dnd').offsetWidth + 'px';
 			
 			avatar.style.background = "#333";
 			avatar.style.color = "#fff";
 
-			avatar.style.top = $(this.id).winkGetTopPosition() + 'px';
-			avatar.style.left = ($('test_dnd').winkGetLeftPosition()-window.innerWidth > 0)?($('test_dnd').winkGetLeftPosition()-window.innerWidth + 'px'):'15px';
+			avatar.style.top = wink.getTopPosition(wink.byId(this.id)) + 'px';
+			avatar.style.left = (wink.getLeftPosition(wink.byId('test_dnd'))-window.innerWidth > 0)?(wink.getLeftPosition(wink.byId('test_dnd'))-window.innerWidth + 'px'):'15px';
 			
 			return avatar;
 		};
@@ -69,7 +69,7 @@ ks.tests.dnd = (function()
 			if(!this._isOver)
 			{
 				this.over();
-				$(this.id).style.color = '#ff0000';
+				wink.byId(this.id).style.color = '#ff0000';
 			}
 		};
 
@@ -78,7 +78,7 @@ ks.tests.dnd = (function()
 			if(this._isOver)
 			{
 				this.out();
-				$(this.id).style.color = 'inherit';
+				wink.byId(this.id).style.color = 'inherit';
 			}
 		};
 
@@ -127,7 +127,7 @@ ks.tests.dnd = (function()
 		                pozY: event.target.pozYinit
 		            };
 					
-					$('test_dnd').appendChild(this._currentAvatar.target);
+					wink.byId('test_dnd').appendChild(this._currentAvatar.target);
 				}
 				
 		    }
@@ -162,7 +162,7 @@ ks.tests.dnd = (function()
 				}
 				
 				// remove the avatar
-				$('test_dnd').removeChild(this._currentAvatar.target);
+				wink.byId('test_dnd').removeChild(this._currentAvatar.target);
 				
 				// reset the drag and drop
 				this._currentSource.deactivate();
@@ -191,7 +191,7 @@ ks.tests.dnd = (function()
 				this._currentAvatar.target.pozXinit = this._currentAvatar.pozX + event.x - this._currentAvatar.beginX;	
 				this._currentAvatar.target.pozYinit = this._currentAvatar.pozY + event.y - this._currentAvatar.beginY;	
 				
-				this._currentAvatar.target.translate(0, this._currentAvatar.target.pozYinit);
+				wink.fx.translate(this._currentAvatar.target, 0, this._currentAvatar.target.pozYinit);
 				
 				// check if we are over a drop target
 				this._currentTarget = this._getTarget(event.x, event.y);
@@ -238,25 +238,25 @@ ks.tests.dnd = (function()
 	{
 		params.target.onSourceOut();
 
-		var sourceId = $(params.source.id).parentNode.id;
+		var sourceId = wink.byId(params.source.id).parentNode.id;
 		var targetId = params.target.id;
 
 		if ( sourceId != targetId )
 		{
-			var sourceTop = $(sourceId).winkGetTopPosition();
-			var targetTop = $(targetId).winkGetTopPosition();
+			var sourceTop = wink.getTopPosition(wink.byId(sourceId));
+			var targetTop = wink.getTopPosition(wink.byId(targetId));
 
 			if( targetTop < sourceTop)
 			{
-				$(targetId).parentNode.insertBefore($(sourceId), $(targetId));
+				wink.byId(targetId).parentNode.insertBefore(wink.byId(sourceId), wink.byId(targetId));
 			} else 
 			{
-				if( $(targetId) == $(targetId).parentNode.lastChild)
+				if( wink.byId(targetId) == wink.byId(targetId).parentNode.lastChild)
 				{
-					$(targetId).parentNode.appendChild($(sourceId));
+					wink.byId(targetId).parentNode.appendChild(wink.byId(sourceId));
 				} else 
 				{
-					$(targetId).parentNode.insertBefore($(sourceId), $(targetId).nextSibling);
+					wink.byId(targetId).parentNode.insertBefore(wink.byId(sourceId), wink.byId(targetId).nextSibling);
 				}
 			}
 		} else

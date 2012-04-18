@@ -55,8 +55,8 @@ ks.tests.video = (function()
 		wink.connect(this.player1, 'play', {context: this, method: 'displayVideo1'});
 		wink.connect(this.player2, 'play', {context: this, method: 'displayVideo2'});
 
-		$('test_video_1').appendChild(this.player1.getDomNode());
-		$('test_video_2').appendChild(this.player2.getDomNode());
+		wink.byId('test_video_1').appendChild(this.player1.getDomNode());
+		wink.byId('test_video_2').appendChild(this.player2.getDomNode());
 	};
 	
 	video.displayVideo1 = function()

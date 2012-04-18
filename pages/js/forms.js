@@ -9,7 +9,7 @@ ks.tests.form = (function()
     {
     	if ( wink.ua.isIOS && wink.ua.osVersion < 5)
     	{
-    		$('test_forms').style.visibility = 'hidden';
+    		wink.byId('test_forms').style.visibility = 'hidden';
     	}
     };
     
@@ -20,7 +20,7 @@ ks.tests.form = (function()
     {
     	if ( wink.ua.isIOS && wink.ua.osVersion < 5)
     	{
-    		$('test_forms').style.visibility = 'visible';
+    		wink.byId('test_forms').style.visibility = 'visible';
     	}
     };
     

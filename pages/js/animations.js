@@ -30,28 +30,28 @@ ks.tests.animations = (function()
 	
 	animations.flip = function()
 	{
-		$('test_animations_1').parentNode.style["-webkit-perspective"] = 500;
-		$('test_animations_1').style["-webkit-transform-style"] = 'preserve-3d';
+		wink.byId('test_animations_1').parentNode.style["-webkit-perspective"] = 500;
+		wink.byId('test_animations_1').style["-webkit-transform-style"] = 'preserve-3d';
 		
-		$('test_animations_page_1').style["-webkit-backface-visibility"] = "hidden";
-		$('test_animations_page_2').style["-webkit-backface-visibility"] = "hidden";
+		wink.byId('test_animations_page_1').style["-webkit-backface-visibility"] = "hidden";
+		wink.byId('test_animations_page_2').style["-webkit-backface-visibility"] = "hidden";
 		
-		wink.fx.initComposedTransform($('test_animations_page_2'));
-		wink.fx.setTransformPart($('test_animations_page_2'), 1, { type: "rotate", x: 0, y: 1, z: 0, angle: -180});
-		wink.fx.applyComposedTransform($('test_animations_page_2'));
+		wink.fx.initComposedTransform(wink.byId('test_animations_page_2'));
+		wink.fx.setTransformPart(wink.byId('test_animations_page_2'), 1, { type: "rotate", x: 0, y: 1, z: 0, angle: -180});
+		wink.fx.applyComposedTransform(wink.byId('test_animations_page_2'));
 		
-		$('test_animations_page_1').style.zIndex = 1;
-		$('test_animations_page_2').style.zIndex = 2;
+		wink.byId('test_animations_page_1').style.zIndex = 1;
+		wink.byId('test_animations_page_2').style.zIndex = 2;
 		
-		wink.fx.initComposedTransform($('test_animations_1'));
-		wink.fx.setTransformPart($('test_animations_1'), 1, { type: "rotate", x: 0, y: 1, z: 0, angle: -180});
-		wink.fx.applyComposedTransform($('test_animations_1'));
+		wink.fx.initComposedTransform(wink.byId('test_animations_1'));
+		wink.fx.setTransformPart(wink.byId('test_animations_1'), 1, { type: "rotate", x: 0, y: 1, z: 0, angle: -180});
+		wink.fx.applyComposedTransform(wink.byId('test_animations_1'));
 	};
 	
 	animations.flip2 = function() 
 	{
-		var node = $('test_animations_page_3');
-		var node2 = $('test_animations_page_4');
+		var node = wink.byId('test_animations_page_3');
+		var node2 = wink.byId('test_animations_page_4');
 		
 		node.parentNode.appendChild(this.clone.copy.container.node);
 		node.style.opacity = 0;
@@ -96,7 +96,7 @@ ks.tests.animations = (function()
 	
 	animations.fly = function()
 	{
-		var node3 = $('test_animations_page_5');
+		var node3 = wink.byId('test_animations_page_5');
 		
 		node3.parentNode.appendChild(this.clone3.copy.container.node);
 		node3.style.opacity = 0;
@@ -106,7 +106,7 @@ ks.tests.animations = (function()
 	
 	animations.tip = function()
 	{
-		var node4 = $('test_animations_page_7');
+		var node4 = wink.byId('test_animations_page_7');
 		
 		node4.parentNode.appendChild(this.clone4.copy.container.node);
 		node4.style.opacity = 0;
@@ -116,15 +116,15 @@ ks.tests.animations = (function()
 	
 	animations.init = function()
 	{
-		wink.fx.applyTransformTransition($('test_animations_1'), '1000ms', '0ms', 'default');
+		wink.fx.applyTransformTransition(wink.byId('test_animations_1'), '1000ms', '0ms', 'default');
 		
 		// Flip 2 init
-		this.clone = wink.fx.split($('test_animations_page_3'), 6, 6);
+		this.clone = wink.fx.split(wink.byId('test_animations_page_3'), 6, 6);
 		
 		this.clone.copy.container.node.style.left = '0';
 		this.clone.copy.container.node.style.top = '0';
 
-		this.clone2 = wink.fx.split($('test_animations_page_4'), 6, 6);
+		this.clone2 = wink.fx.split(wink.byId('test_animations_page_4'), 6, 6);
 		
 		this.clone2.copy.container.node.style.left = '0';
 		this.clone2.copy.container.node.style.top = '0';
@@ -133,7 +133,7 @@ ks.tests.animations = (function()
 		this.rotateParts(this.clone2, 179, 0, 0, null);
 		
 		// Fly init
-		this.clone3 = wink.fx.split($('test_animations_page_5'), 6, 6);
+		this.clone3 = wink.fx.split(wink.byId('test_animations_page_5'), 6, 6);
 		
 		this.clone3.copy.container.node.style.left = '0';
 		this.clone3.copy.container.node.style.top = '0';
@@ -171,7 +171,7 @@ ks.tests.animations = (function()
 		}
 		
 		// Tip init
-		this.clone4 = wink.fx.split($('test_animations_page_7'), 1, 2);
+		this.clone4 = wink.fx.split(wink.byId('test_animations_page_7'), 1, 2);
 
 		this.clone4.copy.container.node.style.left = '0';
 		this.clone4.copy.container.node.style.top = '0';

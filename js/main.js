@@ -47,9 +47,9 @@ ks.main = (function()
 		wink.subscribe('/history/events/back', {context: ks.main, method: 'slideBackFromHistory'});
 		wink.subscribe('/history/events/forward', {context: ks.main, method: 'slideToFromHistory'});
 		
-		wink.fx.applyTransformTransition($('container'), '400ms');
+		wink.fx.applyTransformTransition(wink.byId('container'), '400ms');
 		
-		$('options').style.visibility = 'visible';
+		wink.byId('options').style.visibility = 'visible';
 		
 		ks.spinner = new wink.ui.xy.CSpinner(
 		{
@@ -68,7 +68,7 @@ ks.main = (function()
 		
 		ks.spinner.toggle();
 		
-		$('loader').appendChild(ks.spinner.getDomNode());
+		wink.byId('loader').appendChild(ks.spinner.getDomNode());
 		
 		ks.xhr = new wink.Xhr();
 
@@ -106,12 +106,12 @@ ks.main = (function()
 		
 		if ( wink.ux.window.orientation == 'horizontal' )
 		{
-			$('orientation').style.display = 'block';
-			$('wrapper').style.display = 'none';
+			wink.byId('orientation').style.display = 'block';
+			wink.byId('wrapper').style.display = 'none';
 		} else
 		{
-			$('orientation').style.display = 'none';
-			$('wrapper').style.display = 'block';
+			wink.byId('orientation').style.display = 'none';
+			wink.byId('wrapper').style.display = 'block';
 		}
 	};
 	

@@ -62,36 +62,36 @@ ks.tests.carousel = (function()
 		carousel.carousel1 = new wink.ui.xy.Carousel(properties1);
 		carousel.carousel2 = new wink.ui.xy.Carousel(properties2);
 		
-		$('test_carousel_1').appendChild(carousel.carousel1.getDomNode());
-		$('test_carousel_2').appendChild(carousel.carousel2.getDomNode());
+		wink.byId('test_carousel_1').appendChild(carousel.carousel1.getDomNode());
+		wink.byId('test_carousel_2').appendChild(carousel.carousel2.getDomNode());
 		
-		wink.fx.applyTransition($('dynamicalAd'), 'opacity', '1500ms', '0ms', 'ease-in-out');
-		wink.fx.onTransitionEnd($('dynamicalAd'), carousel.switchAd);
+		wink.fx.applyTransition(wink.byId('dynamicalAd'), 'opacity', '1500ms', '0ms', 'ease-in-out');
+		wink.fx.onTransitionEnd(wink.byId('dynamicalAd'), carousel.switchAd);
 		
-		wink.fx.applyTransformTransition($('flippableItem'), '500ms', '0ms', 'ease-in-out');
-		wink.fx.apply($('flippableItem').parentNode, 
+		wink.fx.applyTransformTransition(wink.byId('flippableItem'), '500ms', '0ms', 'ease-in-out');
+		wink.fx.apply(wink.byId('flippableItem').parentNode, 
 		{
 			"transform-style": "preserve-3d",
 			"perspective": "500"
 		});
 		
-		setTimeout(function(){$('dynamicalAd').style.opacity = "0"; carousel.currentOpacity = 0;}, 3000);
+		setTimeout(function(){wink.byId('dynamicalAd').style.opacity = "0"; carousel.currentOpacity = 0;}, 3000);
 	};
 	
 	carousel.switchCarousel = function(type)
 	{
 		if ( type == 0 )
 		{
-			$('test_carousel_1').style.display = 'block';
-			$('test_carousel_2').style.display = 'none';
+			wink.byId('test_carousel_1').style.display = 'block';
+			wink.byId('test_carousel_2').style.display = 'none';
 			
-			wink.fx.onTransitionEnd($('dynamicalAd'), carousel.switchAd);
+			wink.fx.onTransitionEnd(wink.byId('dynamicalAd'), carousel.switchAd);
 			setTimeout(carousel.switchAd, 1000);
 			
 		} else
 		{
-			$('test_carousel_1').style.display = 'none';
-			$('test_carousel_2').style.display = 'block';
+			wink.byId('test_carousel_1').style.display = 'none';
+			wink.byId('test_carousel_2').style.display = 'block';
 		}
 		
 	};
@@ -126,30 +126,30 @@ ks.tests.carousel = (function()
 	
 	carousel.switchAd = function()
 	{
-		if ( wink.isSet($('dynamicalAd')) )
+		if ( wink.isSet(wink.byId('dynamicalAd')) )
 		{
 			if ( carousel.currentOpacity == 0 )
 			{
 				if ( carousel.currentAd == 2 )
 				{
-					$('dynamicalAd').src = './pages/images/ad_3.gif';
+					wink.byId('dynamicalAd').src = './pages/images/ad_3.gif';
 					carousel.currentAd = 3;
 				} else if ( carousel.currentAd == 3 )
 				{
-					$('dynamicalAd').src = './pages/images/ad_2.gif';
+					wink.byId('dynamicalAd').src = './pages/images/ad_2.gif';
 					carousel.currentAd = 2;
 				}
 			}
 			
-			wink.fx.onTransitionEnd($('dynamicalAd'), carousel.switchAd);
+			wink.fx.onTransitionEnd(wink.byId('dynamicalAd'), carousel.switchAd);
 			
-			if ( $('dynamicalAd').style.opacity == "0" )
+			if ( wink.byId('dynamicalAd').style.opacity == "0" )
 			{
-				$('dynamicalAd').style.opacity = "1";
+				wink.byId('dynamicalAd').style.opacity = "1";
 				carousel.currentOpacity = 1;
 			} else
 			{
-				$('dynamicalAd').style.opacity = "0";
+				wink.byId('dynamicalAd').style.opacity = "0";
 				carousel.currentOpacity = 0;
 			}
 		}

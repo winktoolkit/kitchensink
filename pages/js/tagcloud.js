@@ -52,12 +52,12 @@ ks.tests.tagcloud = (function()
 		
 		wink.subscribe('/tagcloud/events/selection', { context: this, method: 'handleTagSelection' });
 		
-		$('test_tagcloud_1').appendChild(this.cloud.getDomNode());
+		wink.byId('test_tagcloud_1').appendChild(this.cloud.getDomNode());
 	};
 	
 	tagcloud.handleTagSelection = function(param)
 	{
-		$('test_tagcloud_2').innerHTML = 'Wink tag cloud (\'' + $(param.tag.id).innerHTML +'\' selected)';
+		wink.byId('test_tagcloud_2').innerHTML = 'Wink tag cloud (\'' + wink.byId(param.tag.id).innerHTML +'\' selected)';
 	};
 	
 	tagcloud.init();

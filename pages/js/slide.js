@@ -29,7 +29,7 @@ ks.tests.slide = (function()
 		}
 		
 		this.panel =  new wink.ui.layout.SlidingPanels(properties);
-		$('test_slide_1').appendChild(this.panel.getDomNode());
+		wink.byId('test_slide_1').appendChild(this.panel.getDomNode());
 	};
 	
 	slide.slideTo = function(id)

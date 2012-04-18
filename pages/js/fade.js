@@ -4,7 +4,7 @@ ks.tests.fade = (function()
 	
 	fade.fadeOut = function()
 	{
-		wink.fx.fadeOut($('test_fade_page_1'), {duration: 900});
+		wink.fx.fadeOut(wink.byId('test_fade_page_1'), {duration: 900});
 	};
 	
 	return fade;
