@@ -2,7 +2,10 @@
  * @author:
  * 	--> Jérôme GIRAUD
  */
+
 ks.winkPath = '../wink/';
+ks.winkPluginsPath = '../';
+
 ks.config =
 {
 	ui:
@@ -844,7 +847,19 @@ ks.config =
 	 	{
 	 		title: 'Visual feedback', 
 	 		url:'./pages/html/feedback.html',
-	 		resources: []
+	 		resources: 
+	 		[
+	 		 	{
+	 		 		url: ks.winkPluginsPath + 'visualfeedback/js/visualfeedback.js',
+	 		 		type: 'js',
+					group: 0
+	 		 	},
+				{ 
+					url: './pages/js/visualfeedback.js', 
+					type: 'js',
+					group: 1
+				}    
+	 		 ]
 	 	},
 	],
 	media:
