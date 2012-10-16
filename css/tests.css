@@ -3,6 +3,8 @@
 	position: relative;
 	margin-top: 5px;
 	z-index: 100;
+	
+	-ms-touch-action: none;
 }
 
 #tests_scroller .w_bg_light

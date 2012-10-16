@@ -9,6 +9,7 @@
 #splash div
 {
 	display: -webkit-box;
+	display: -ms-flexbox;
 	
 	height: 100%;
 	width: 100%;
@@ -16,6 +17,10 @@
 	-webkit-box-orient: vertical;
 	-webkit-box-align: center;
 	-webkit-box-pack: center;
+	
+	-ms-flex-orient: vertical;
+	-ms-flex-align: center;
+	-ms-flex-pack: center;
 }
 
 #splash img
