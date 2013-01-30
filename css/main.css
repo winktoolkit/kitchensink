@@ -37,6 +37,8 @@ html, body
 	opacity: 0;
 	
 	visibility: hidden;
+
+	z-index: 300;
 }
 
 .panel
@@ -116,6 +118,8 @@ html, body
 	
 	-webkit-box-shadow: inset -4px 4px 15px #000;
 	-moz-box-shadow: inset -4px 4px 15px #000;
+
+	z-index: 200;
 }
 
 #options p
